@@ -1,0 +1,7 @@
+{
+  "name": "pc-hastebin for Vizality",
+  "version": "1.0.0A",
+  "description": "Quickly save and post a hastebin in the current channel",
+  "author": "Powercord Team, A user",
+  "license": "MIT"
+}
