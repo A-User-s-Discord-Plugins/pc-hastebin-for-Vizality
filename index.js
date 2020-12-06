@@ -31,7 +31,7 @@ module.exports = class Hastebin extends Plugin {
         if (!data) {
           return {
             send: false,
-            result: `Invalid arguments. Run \`${powercord.api.commands.prefix}help hastebin\` for more information.`
+            result: `Invalid arguments. Run \`${vizality.api.commands.prefix}help hastebin\` for more information.`
           };
         }
 
