@@ -9,7 +9,7 @@ module.exports = class Hastebin extends Plugin {
     const domain = this.settings.get('domain', 'https://paste.vizality.com/');
 
     vizality.api.settings.registerAddonSettings({
-      id: this.entityID,
+      id: this.addonId,
       heading: 'Hastebin',
       render: Settings
     })
@@ -53,7 +53,7 @@ module.exports = class Hastebin extends Plugin {
   }
 
   onStop () {
-    vizality.api.settings.unregisterSettings(this.entityID);
+    vizality.api.settings.unregisterSettings(this.addonId);
     vizality.api.commands.unregisterCommand('hastebin');
   }
 
