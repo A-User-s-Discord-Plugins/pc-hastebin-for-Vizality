@@ -5,14 +5,8 @@ const { clipboard } = require('electron');
 const Settings = require('./Settings.jsx');
 
 module.exports = class Hastebin extends Plugin {
-  onStart () {
+  start () {
     const domain = this.settings.get('domain', 'https://paste.vizality.com/');
-
-    vizality.api.settings.registerAddonSettings({
-      id: this.addonId,
-      heading: 'Hastebin',
-      render: Settings
-    })
 
     vizality.api.commands.registerCommand({
       command: 'hastebin',
@@ -52,7 +46,7 @@ module.exports = class Hastebin extends Plugin {
     });
   }
 
-  onStop () {
+  stop () {
     vizality.api.settings.unregisterSettings(this.addonId);
     vizality.api.commands.unregisterCommand('hastebin');
   }
